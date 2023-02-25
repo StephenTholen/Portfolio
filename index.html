@@ -21,11 +21,10 @@
 		<link rel="stylesheet" href="assets\sass\main.css" />
 		<noscript><link rel="stylesheet" href="assets\sass\noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
 
+	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
-
 				<!-- One -->
 					<section class="banner style5 orient-left content-align-center image-position-right fullscreen onload-content-fade-right onload-image-fade-left invert">
 						<div class="content">
@@ -42,21 +41,24 @@
 							<img src="images/banner4.jpg" alt="" />
 						</div>
 					</section>
-
 				<!-- Two -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in invert" id="first">
 						<div class="content">
 							<h2>Christmas Eve at Northshore Community Church</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><button class="button collapsible">Learn More</button></li>
 							</ul>
+							
+
 						</div>
 						<div class="image">
 							<img src="images/spotlight01.jpg" alt="" />
 						</div>
 					</section>
-
+					<div class="collapsiblecontent", id="expand">
+						<p>Lorem ipsum...</p>
+					</div>
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in invert">
 						<div class="content">
@@ -361,6 +363,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var coll = document.getElementsByClassName("collapsible");
+				var i;
+
+				for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var content = document.getElementById("expand");
+					if (content.style.display === "block") {
+					content.style.display = "none";
+					} else {
+					content.style.display = "block";
+					}
+				});
+				}
+			</script>
 
 	</body>
 </html>
