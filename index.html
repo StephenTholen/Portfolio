@@ -64,7 +64,7 @@
 						</div>
 					</section>
 					<div class="collapsiblecontent", id="expand">
-						<p>Lorem ipsum...</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 					</div>
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in invert">
@@ -268,19 +268,19 @@
 			<script>
 				var coll = document.getElementsByClassName("collapsible");
 				var i;
-
+				
 				for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function() {
-					this.classList.toggle("active");
+				  coll[i].addEventListener("click", function() {
+					this.classList.toggle("expanded");
 					var content = document.getElementById("expand");
-					if (content.style.display === "block") {
-					content.style.display = "none";
+					if (content.style.maxHeight){
+					  content.style.maxHeight = null;
 					} else {
-					content.style.display = "block";
+					  content.style.maxHeight = content.scrollHeight + "px";
 					}
-				});
+				  });
 				}
-			</script>
+				</script>
 
 	</body>
 </html>
