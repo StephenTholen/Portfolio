@@ -37,7 +37,7 @@
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.6s ease-out;
   background-color: #000000;
   color: #FFFFFF;
 }
@@ -51,6 +51,14 @@
 .vidcontainer {
   display: flex;
   justify-content: center;
+}
+
+.logo {
+  border-radius: 4em;
+  display: inline-block;
+  height: 4em;
+  line-height: 4em;
+  width: 4em;
 }
 
 html, body, div, span, applet, object,
