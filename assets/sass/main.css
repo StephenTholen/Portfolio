@@ -1,4 +1,4 @@
-@import 'fontawesome-all.min.css';
+@import '/assets/css/fontawesome-all.min.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
 /*
 	Story by HTML5 UP
@@ -6,35 +6,19 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 .fadecycle > *:nth-child(1) {
-  -webkit-animation: fadeinout 20s linear -1.25s infinite;
-          animation: fadeinout 20s linear -1.25s infinite;
+  animation: fadeinout 20s linear -1.25s infinite;
 }
 
 .fadecycle > *:nth-child(2) {
-  -webkit-animation: fadeinout 20s linear 3.75s infinite;
-          animation: fadeinout 20s linear 3.75s infinite;
+  animation: fadeinout 20s linear 3.75s infinite;
 }
 
 .fadecycle > *:nth-child(3) {
-  -webkit-animation: fadeinout 20s linear 8.75s infinite;
-          animation: fadeinout 20s linear 8.75s infinite;
+  animation: fadeinout 20s linear 8.75s infinite;
 }
 
 .fadecycle > *:nth-child(4) {
-  -webkit-animation: fadeinout 20s linear 13.75s infinite;
-          animation: fadeinout 20s linear 13.75s infinite;
-}
-
-@-webkit-keyframes fadeinout {
-  0% {
-    opacity: 0;
-  }
-  6.25%, 25% {
-    opacity: 1;
-  }
-  31.25%, 100% {
-    opacity: 0;
-  }
+  animation: fadeinout 20s linear 13.75s infinite;
 }
 
 @keyframes fadeinout {
@@ -48,6 +32,17 @@
     opacity: 0;
   }
 }
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsiblecontent {
+  display: none;
+  overflow: hidden;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -114,9 +109,6 @@ input, select, textarea {
 }
 
 /* Basic */
-@-ms-viewport {
-  width: device-width;
-}
 body {
   -ms-overflow-style: scrollbar;
 }
@@ -138,7 +130,6 @@ body {
   background: #ffffff;
 }
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-  -webkit-animation: none !important;
   animation: none !important;
   transition: none !important;
 }
@@ -173,7 +164,7 @@ body {
   color: #000000;
 }
 
-body, input, select, textarea {
+body, input, select, textarea, button {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -1939,7 +1930,6 @@ input[type=radio] + label {
   text-decoration: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   display: inline-block;
@@ -2322,17 +2312,17 @@ ul.actions.fit.stacked {
     padding-top: 0;
   }
   ul.actions:not(.fixed) li input[type=submit],
-ul.actions:not(.fixed) li input[type=reset],
-ul.actions:not(.fixed) li input[type=button],
-ul.actions:not(.fixed) li button,
-ul.actions:not(.fixed) li .button {
+  ul.actions:not(.fixed) li input[type=reset],
+  ul.actions:not(.fixed) li input[type=button],
+  ul.actions:not(.fixed) li button,
+  ul.actions:not(.fixed) li .button {
     width: 100%;
   }
   ul.actions:not(.fixed) li input[type=submit].icon:before,
-ul.actions:not(.fixed) li input[type=reset].icon:before,
-ul.actions:not(.fixed) li input[type=button].icon:before,
-ul.actions:not(.fixed) li button.icon:before,
-ul.actions:not(.fixed) li .button.icon:before {
+  ul.actions:not(.fixed) li input[type=reset].icon:before,
+  ul.actions:not(.fixed) li input[type=button].icon:before,
+  ul.actions:not(.fixed) li button.icon:before,
+  ul.actions:not(.fixed) li .button.icon:before {
     margin-left: -0.5rem;
   }
 }
@@ -5129,14 +5119,6 @@ body.is-preload .gallery.onload-fade-in article .image img {
 }
 
 /* Gallery (lightbox) */
-@-webkit-keyframes gallery-modal-spinner {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes gallery-modal-spinner {
   0% {
     transform: rotate(0deg);
@@ -5158,7 +5140,6 @@ body.is-preload .gallery.onload-fade-in article .image img {
   pointer-events: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   transition: opacity 0.5s ease, visibility 0.5s, z-index 0.5s;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -5174,7 +5155,6 @@ body.is-preload .gallery.onload-fade-in article .image img {
   z-index: 0;
 }
 .gallery.lightbox .modal:before {
-  -webkit-animation: gallery-modal-spinner 1s infinite linear;
   animation: gallery-modal-spinner 1s infinite linear;
   transition: opacity 0.25s ease;
   transition-delay: 0.5s;
