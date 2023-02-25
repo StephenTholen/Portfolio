@@ -60,11 +60,20 @@
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	background-color: #000000;
-	color: #FFFFFF
+	color: #FFFFFF;
   }
 
 
+  .video {
+	aspect-ratio: 16 / 9;
+	width: 50%;
+	margin: .5% .5% .5%;
 
+  }
+  .vidcontainer{
+	display: flex;
+	justify-content: center;
+  }
 
 
 // Breakpoints.
