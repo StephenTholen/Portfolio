@@ -19,6 +19,7 @@
 		<title>Stephen Tholen</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="iamge/x-icon" href="images\favicon.ico">
 		<link rel="stylesheet" href="assets\sass\main.css" />
 		<noscript><link rel="stylesheet" href="assets\sass\noscript.css" /></noscript>
 	</head>
@@ -173,49 +174,49 @@
 							<h2>I'm Experienced In:</h2>
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
-									<span class="icon style2 major fa-gem"></span>
+									<img src="images/icons/vista.jpg" class="logo"></img>
 									<h3>ChromaQ Vista</h3>
 									<p>Lighting Console</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-save"></span>
+									<img src="images/icons/etc.png" class="logo"></img>
 									<h3>ETC Element</h3>
 									<p>Lighting Console</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-chart-bar"></span>
-									<h3>Allen & Heath SQ5</h3>
+									<img src="images/icons/SQ.png" class="logo"></img>
+									<h3>Allen & Heath SQ</h3>
 									<p>Mixing Console</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-wifi"></span>
+									<img src="images/icons/Fusion.png" class="logo"></img>
 									<h3>Autodesk Fusion 360</h3>
 									<p>3D Modeling</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-cog"></span>
+									<img src="images/icons/qlab.png" class="logo"></img>
 									<h3>QLab</h3>
-									<p>Media Playback</p>
+									<p>Audio & Video Playback</p>
 								</section>
 								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
+									<img src="images/icons/resolve.png" class="logo"></img>
 									<h3>Davinci Resolve</h3>
 									<p>Video Editing Suite</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-desktop"></span>
+									<img src="images/icons/ross.jpg" class="logo"></img>
 									<h3>Ross Carbonite</h3>
 									<p>Video Switching & Routing</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-sync-alt"></span>
+									<img src="images/icons/shure.png" class="logo"></img>
 									<h3>Shure Integrated Systems Level 2</h3>
-									<p>Lorem ipsum dolor sit amet.</p>
+									<p>Wireless Audio & Audio Integration</p>
 								</section>
 								<section>
-									<span class="icon solid style2 major fa-hashtag"></span>
+									<img src="images/icons/dante.png" class="logo"></img>
 									<h3>Dante Certification Level 2</h3>
-									<p>Lorem ipsum dolor sit ame.</p>
+									<p>Networked Audio & Network Management</p>
 								</section>
 							</div>
 						</div>
@@ -269,6 +270,11 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+				function scrollTo (id) {
+				$('html,body').animate({
+					scrollTop: $("#"+id).offset().top - $(window).height()/3
+				}, 800);
+				}
 				var coll = document.getElementsByClassName("collapsible");
 				var i;
 				
@@ -280,6 +286,7 @@
 					  content.style.maxHeight = null;
 					} else {
 					  content.style.maxHeight = content.scrollHeight + "px";
+					  scrollTo("expand");
 					}
 				  });
 				}
