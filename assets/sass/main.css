@@ -32,15 +32,14 @@
     opacity: 0;
   }
 }
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
-}
-
 /* Style the collapsible content. Note: hidden by default */
 .collapsiblecontent {
-  display: none;
+  padding: 0 18px;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 html, body, div, span, applet, object,
@@ -1749,6 +1748,7 @@ button,
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
   color: #000000 !important;
+  /* If the button is part of a collapsable, once pressed keep it's background active */
 }
 input[type=submit]:hover,
 input[type=reset]:hover,
@@ -1766,6 +1766,13 @@ button:active,
   background-color: rgba(71, 211, 229, 0.2);
   box-shadow: inset 0 0 0 1px #47D3E5;
   color: #47D3E5 !important;
+}
+input[type=submit].expanded,
+input[type=reset].expanded,
+input[type=button].expanded,
+button.expanded,
+.button.expanded {
+  background-color: rgba(71, 211, 229, 0.2);
 }
 input[type=submit].primary,
 input[type=reset].primary,
@@ -4670,6 +4677,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgb(255, 255, 255);
   color: #ffffff !important;
+  /* If the button is part of a collapsable, once pressed keep it's background active */
 }
 .gallery.style1 input[type=submit]:hover,
 .gallery.style1 input[type=reset]:hover,
@@ -4687,6 +4695,13 @@ body.is-preload .gallery.onload-fade-in article .image img {
   background-color: rgba(71, 211, 229, 0.2);
   box-shadow: inset 0 0 0 1px #47D3E5;
   color: #47D3E5 !important;
+}
+.gallery.style1 input[type=submit].expanded,
+.gallery.style1 input[type=reset].expanded,
+.gallery.style1 input[type=button].expanded,
+.gallery.style1 button.expanded,
+.gallery.style1 .button.expanded {
+  background-color: rgba(71, 211, 229, 0.2);
 }
 .gallery.style1 input[type=submit].primary,
 .gallery.style1 input[type=reset].primary,
@@ -4911,6 +4926,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgb(255, 255, 255);
   color: #ffffff !important;
+  /* If the button is part of a collapsable, once pressed keep it's background active */
 }
 .gallery.style2 input[type=submit]:hover,
 .gallery.style2 input[type=reset]:hover,
@@ -4928,6 +4944,13 @@ body.is-preload .gallery.onload-fade-in article .image img {
   background-color: rgba(71, 211, 229, 0.2);
   box-shadow: inset 0 0 0 1px #47D3E5;
   color: #47D3E5 !important;
+}
+.gallery.style2 input[type=submit].expanded,
+.gallery.style2 input[type=reset].expanded,
+.gallery.style2 input[type=button].expanded,
+.gallery.style2 button.expanded,
+.gallery.style2 .button.expanded {
+  background-color: rgba(71, 211, 229, 0.2);
 }
 .gallery.style2 input[type=submit].primary,
 .gallery.style2 input[type=reset].primary,
@@ -5950,6 +5973,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgb(255, 255, 255);
   color: #ffffff !important;
+  /* If the button is part of a collapsable, once pressed keep it's background active */
 }
 #wrapper > .invert input[type=submit]:hover,
 #wrapper > .invert input[type=reset]:hover,
@@ -5967,6 +5991,13 @@ body.is-preload .items.onload-fade-in > * > .inner {
   background-color: rgba(71, 211, 229, 0.2);
   box-shadow: inset 0 0 0 1px #47D3E5;
   color: #47D3E5 !important;
+}
+#wrapper > .invert input[type=submit].expanded,
+#wrapper > .invert input[type=reset].expanded,
+#wrapper > .invert input[type=button].expanded,
+#wrapper > .invert button.expanded,
+#wrapper > .invert .button.expanded {
+  background-color: rgba(71, 211, 229, 0.2);
 }
 #wrapper > .invert input[type=submit].primary,
 #wrapper > .invert input[type=reset].primary,
