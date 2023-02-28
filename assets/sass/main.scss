@@ -82,6 +82,11 @@
 		width: 4em;
 }
 
+.cropped{
+	height: 4em;
+	width: 4em;
+}
+
 // Breakpoints.
 
 	@include breakpoints((
