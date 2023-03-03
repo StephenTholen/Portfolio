@@ -66,14 +66,23 @@
 
   .video {
 	aspect-ratio: 16 / 9;
-	width: 50%;
-	margin: .5% .5% .5%;
+	width: 100%;
 
   }
   .vidcontainer{
 	display: flex;
 	justify-content: center;
+	margin: .5% .5% .5%;
   }
+  .viddiv{
+	text-align: center;
+	width: 50%;
+	h3 {
+		margin: 0;
+	}
+  }
+
+
 .logo{
 		border-radius: 4em;
 		display: inline-block;
